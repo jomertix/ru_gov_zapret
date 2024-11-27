@@ -51,7 +51,7 @@ jobs:
         run: |
           cd code || exit 1
           gh release create ${{ env.TAG_NAME }} \
-            -t ${{ env.RELEASE_NAME }} \
+            -t "${{ env.RELEASE_NAME }}" \
             -n "This release was created automatically at ${{ env.CURRENT_TIME }} GMT+0." \
             ../publish/*.dat \
             ../publish/*.dat.sha256sum
