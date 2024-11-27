@@ -27,7 +27,7 @@ jobs:
       - name: Set variables
         run: |
           echo "CURRENT_TIME=$(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_ENV          
-          echo "RELEASE_NAME=Release created at $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_ENV
+          echo "RELEASE_NAME=$(date -u '+%Y-%m-%d %H:%M:%S UTC') (GMT+0)" >> $GITHUB_ENV
           echo "TAG_NAME=$(date +%Y%m%d%H%M%S)" >> $GITHUB_ENV
         shell: bash
 
@@ -52,7 +52,7 @@ jobs:
           cd code || exit 1
           gh release create ${{ env.TAG_NAME }} \
             -t "${{ env.RELEASE_NAME }}" \
-            -n "This release was created automatically at ${{ env.CURRENT_TIME }} GMT+0." \
+            -n "This release was created automatically at ${{ env.CURRENT_TIME }} (GMT+0)." \
             ../publish/*.dat \
             ../publish/*.dat.sha256sum
         env:
