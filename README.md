@@ -6,12 +6,12 @@
 
 Актуальная версия всегда доступна по адресу 
 ```bash
-wget -O https://github.com/kutovoys/ru_gov_zapret/releases/latest/download/zapret.dat
+wget -O https://github.com/jomertix/ru_gov_zapret/releases/latest/download/zapret.dat
 ```
 
 Имеет две ветки:
-1) zapret.dat:zapret - Все что заблокировано РКН
-1) zapret.dat:zapret-zapad - Ресурсы не обслуживающие Русские IP
+1) zapret.dat:zapret - Все, что заблокировано РКН
+1) zapret.dat:zapret-zapad - Ресурсы, не обслуживающие Русские IP
 
 ## Установка для сервера
 
@@ -21,7 +21,7 @@ mkdir -p /var/lib/marzban/assets/
 ```
 Скачиваем 
 ```bash
-wget -O /var/lib/marzban/assets/zapret.dat https://github.com/kutovoys/ru_gov_zapret/releases/latest/download/zapret.dat
+wget -O /var/lib/marzban/assets/zapret.dat https://github.com/jomertix/ru_gov_zapret/releases/latest/download/zapret.dat
 ```
 Устанавливаем значение в .env файле
 
